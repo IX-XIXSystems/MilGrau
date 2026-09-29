@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética Automotiva MilGrau</title>
+    
+    <!-- Fonts: Outfit for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=27">
+</head>
+<body>
+    <!-- Floating Pill Navigation -->
+    <nav class="floating-nav">
+        <button class="nav-link active" data-target="home">
+            <i class="ph ph-house"></i>
+            <span class="nav-text">Início</span>
+        </button>
+        <button class="nav-link" data-target="services">
+            <i class="ph ph-sparkle"></i>
+            <span class="nav-text">Serviços</span>
+        </button>
+    </nav>
+
+    <!-- Main Content Area (SPA) -->
+    <main id="app-content">
+        
+        <!-- View: Home -->
+        <section id="view-home" class="view active">
+            <div class="hero">
+                <div class="hero-content">
+                    <img src="logo.png" alt="MilGrau Estética Automotiva" class="hero-logo">
+                    
+                    <!-- Ultra Minimalist Neon Pill Location -->
+                    <a href="https://maps.google.com/?q=Av.+Dirceu+José+de+Almeida,+12,+Setor+Bom+Jesus,+Taguatinga" target="_blank" style="display: inline-flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255, 115, 0, 0.03); border: 1px solid rgba(255, 115, 0, 0.15); padding: 8px 18px; border-radius: 20px; text-decoration: none; margin: -0.5rem auto 2.5rem auto; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(255,115,0,0.02);" onmouseover="this.style.background='rgba(255, 115, 0, 0.08)'; this.style.borderColor='rgba(255, 115, 0, 0.3)';" onmouseout="this.style.background='rgba(255, 115, 0, 0.03)'; this.style.borderColor='rgba(255, 115, 0, 0.15)';">
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <i class="ph-fill ph-map-pin" style="color: #ff8c00; font-size: 0.9rem;"></i>
+                            <span style="font-size: 0.8rem; font-weight: 500; color: #ff8c00; letter-spacing: 0.3px;">Av. Dirceu José de Almeida, 12</span>
+                        </div>
+                        <span style="font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.4); margin-top: 2px; text-align: center; max-width: 250px;">Taguatinga • Frente ao Mercado Ponto Certo</span>
+                    </a>
+                    
+                    <h1>Perfeição Em<br>Cada Detalhe.</h1>
+                    <p>Elevamos o visual do seu veículo com tratamentos premium, devolvendo o brilho e a proteção originais.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary large" onclick="navigateTo('booking')">Agendar Serviço</button>
+                        <button class="btn-secondary large" onclick="navigateTo('services')">Explorar Tratamentos</button>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="marquee-container" style="overflow: hidden; white-space: nowrap; margin-top: 1rem; margin-bottom: 1rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(30,30,30,0.5) 50%, rgba(0,0,0,0) 100%);">
+                <style>
+                    @keyframes scrollMarquee {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                    }
+                    .marquee-content {
+                        display: inline-block;
+                        animation: scrollMarquee 25s linear infinite;
+                        font-family: 'Outfit', sans-serif;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        color: #fff;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                    .marquee-item {
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 0 2rem;
+                    }
+                    .marquee-separator {
+                        color: var(--primary);
+                        margin: 0 1rem;
+                    }
+                </style>
+                <div class="marquee-content">
+                    <span class="marquee-item">LAVAGEM DETALHADA <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">POLIMENTO PREMIUM <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">VITRIFICAÇÃO <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">HIGIENIZAÇÃO INTERNA <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">TRATAMENTO DE COURO <span class="marquee-separator">✦</span></span>
+                    
+                    <!-- Duplicate for infinite scroll loop -->
+                    <span class="marquee-item">LAVAGEM DETALHADA <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">POLIMENTO PREMIUM <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">VITRIFICAÇÃO <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">HIGIENIZAÇÃO INTERNA <span class="marquee-separator">✦</span></span>
+                    <span class="marquee-item">TRATAMENTO DE COURO <span class="marquee-separator">✦</span></span>
+                </div>
+            </div>
+
+            <!-- Professional Footer -->
+            <footer style="text-align: center; padding: 3rem 1rem 4.5rem 1rem;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 1px; text-transform: uppercase;">
+                        Estética Automotiva MilGrau
+                    </span>
+                    <span style="font-size: 0.75rem; color: rgba(255,255,255,0.3);">
+                        &copy; 2026 Todos os direitos reservados.
+                    </span>
+                    <div style="margin-top: 1rem; display: flex; align-items: center; gap: 6px; font-size: 0.7rem; color: rgba(255,255,255,0.3); background: rgba(0,0,0,0.2); padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.02);">
+                        <span>Desenvolvido por</span>
+                        <a href="#" style="color: #ff8c00; font-weight: 600; letter-spacing: 0.5px; text-decoration: none;">IX-XIX Systems</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- View: Services & Pricing -->
+        <section id="view-services" class="view">
+            <button class="back-btn" onclick="navigateTo('home')">
+                <i class="ph ph-arrow-left"></i> Voltar
+            </button>
+            <div class="page-header">
+                <h2>Nossos Serviços</h2>
+                <p>Selecione o tamanho do seu veículo para ver os preços exatos.</p>
+                <div class="type-buttons" id="services-vehicle-filter" style="margin-top: 1.5rem; justify-content: center;">
+                    <button type="button" class="btn-type selected" data-type="hatch" onclick="updateServicesView('hatch')">Hatch</button>
+                    <button type="button" class="btn-type" data-type="sedan" onclick="updateServicesView('sedan')">Sedan</button>
+                    <button type="button" class="btn-type" data-type="suv" onclick="updateServicesView('suv')">SUV</button>
+                    <button type="button" class="btn-type" data-type="moto" onclick="updateServicesView('moto')">Moto</button>
+                </div>
+            </div>
+            <div class="pricing-grid">
+                <!-- Populated via JS -->
+            </div>
+        </section>
+
+        <!-- View: Booking (Auto-agendamento) -->
+        <section id="view-booking" class="view">
+                <button class="back-btn" onclick="navigateTo('home')">
+                    <i class="ph ph-arrow-left"></i> Voltar
+                </button>
+                <div class="section-header">
+                    <h2>Agende seu Horário</h2>
+                    <p>Preencha os dados abaixo. Rápido e prático.</p>
+                </div>
+
+                <form id="booking-form" class="glass-form" novalidate>
+                    <div id="step-1">
+                    <div class="form-group autocomplete-container">
+                        <label>Veículo (Marca e Modelo)</label>
+                        <input type="text" id="client-vehicle" placeholder="Ex: Toyota Corolla" required autocomplete="off">
+                        <div id="vehicle-autocomplete-list" class="autocomplete-items select-hide"></div>
+                    </div>
+                    
+                    <div id="manual-type-selection" class="hidden" style="margin-bottom: 1.5rem;">
+                        <label>Qual o tamanho do seu veículo?</label>
+                        <div class="type-buttons">
+                            <button type="button" class="btn-type" data-type="hatch">Hatch</button>
+                            <button type="button" class="btn-type" data-type="sedan">Sedan</button>
+                            <button type="button" class="btn-type" data-type="suv">SUV</button>
+                            <button type="button" class="btn-type" data-type="moto">Moto</button>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="vehicle-type" required>
+
+                    <div class="form-group">
+                        <label>Serviço Desejado</label>
+                        <div class="custom-select" id="custom-service">
+                            <div class="select-selected">Primeiro, informe seu veículo</div>
+                            <div class="select-items select-hide" id="service-items">
+                                <!-- Populated via JS -->
+                            </div>
+                        </div>
+                        <input type="hidden" id="service-select" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Horário</label>
+                            <div class="custom-select" id="custom-time">
+                                <div class="select-selected">Selecione uma data primeiro</div>
+                                <div class="select-items select-hide" id="time-items">
+                                    <!-- Populated via JS based on availability -->
+                                </div>
+                            </div>
+                            <input type="hidden" id="booking-time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Seu Nome</label>
+                        <input type="text" id="client-name" placeholder="Ex: João Silva" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Cor do Veículo</label>
+                            <input type="text" id="vehicle-color" placeholder="Ex: Preto" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone (WhatsApp)</label>
+                            <input type="tel" id="client-phone" placeholder="(00) 00000-0000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Observações (Opcional)</label>
+                        <textarea id="booking-notes" placeholder="Ex: Lavar apenas por fora, mancha no banco, etc." rows="2" style="width: 100%; padding: 0.8rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <!-- Honeypot -->
+                    <input type="text" id="milgrau-honeypot" name="milgrau-honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                    <button type="button" class="btn-primary" id="btn-next-step" style="width: 100%; margin-top: 1rem;">Próximo Passo <i class="ph ph-arrow-right" style="margin-left: 8px;"></i></button>
+                    </div> <!-- End of step-1 -->
+
+                    <div id="step-2" class="hidden">
+                    <div class="addons-section">
+                        <label>Serviços Extras (Opcional)</label>
+                        <div class="addons-grid" id="addons-grid-container">
+                            <!-- JS Injected Addons -->
+                        </div>
+                    </div>
+
+                    <!-- Smart Price Summary Panel -->
+                    <div class="price-display" id="calculated-price-container" style="background: rgba(255,115,0,0.07); border: 1px solid rgba(255,115,0,0.25); border-radius: 14px; padding: 1.2rem 1.4rem; margin-top: 1.2rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;">
+                            <div>
+                                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Resum do Agendamento</div>
+                                <div id="summary-vehicle" style="font-size: 0.9rem; font-weight: 600; color: #fff;"></div>
+                                <div id="summary-service" style="font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 2px;"></div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Valor Estimado</div>
+                                <strong id="calculated-price" style="font-size: 1.5rem; color: var(--primary);">R$ 0,00</strong>
+                            </div>
+                        </div>
+                        <div id="summary-addons" style="margin-top: 10px; font-size: 0.8rem; color: rgba(255,255,255,0.5); display: none;"></div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <button type="button" id="btn-prev-step" class="btn-primary" style="background: rgba(255,255,255,0.1); flex: 0.3;">
+                            <i class="ph ph-arrow-left"></i> Voltar
+                        </button>
+                        <button type="submit" class="btn-primary" style="flex: 1;">Confirmar Agendamento</button>
+                    </div>
+                    </div> <!-- End of step-2 -->
+                </form>
+                
+                <div class="booking-success hidden" id="booking-success-msg">
+                    <i class="ph-fill ph-check-circle success-icon"></i>
+                    <h3>Agendamento Confirmado!</h3>
+                    <p>Sua vaga foi reservada com sucesso. Entraremos em contato via WhatsApp.</p>
+                    <button class="btn-secondary" onclick="resetBookingForm()">Fazer novo agendamento</button>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Firebase SDKs (Compat version for classic scripts) -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="firebase-config.js?v=63"></script>
+    <script src="car-database.js?v=63"></script>
+    <script src="app.js?v=63"></script>
+</body>
+</html>
