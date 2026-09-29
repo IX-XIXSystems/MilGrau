@@ -49,6 +49,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
 }
 
 /* Subtle Animated Background Glow */
@@ -542,6 +545,25 @@ input, .select-selected {
     outline: none;
     transition: var(--transition-fast);
     cursor: pointer;
+    
+    /* iOS Fixes */
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: left;
+    min-height: 54px;
+}
+
+/* Specific iOS fixes for Date/Time inputs */
+input[type="date"], input[type="time"] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: left;
+    font-family: inherit;
+    box-sizing: border-box;
 }
 
 input:focus, .select-selected.select-arrow-active {

@@ -595,8 +595,8 @@ function handleBookingSubmit(e) {
     const waNumber = milgrauSettings.whatsappNumber || '5549998396690';
     const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
     
-    // Redirect to WhatsApp
-    window.open(waLink, '_blank');
+    // Redirect to WhatsApp (window.location.href works better on iOS to trigger deep links without popup blockers)
+    window.location.href = waLink;
 
     // Show success message
     document.getElementById('booking-form').classList.add('hidden');

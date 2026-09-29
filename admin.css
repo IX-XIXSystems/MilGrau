@@ -33,6 +33,9 @@ body {
     display: flex;
     height: 100dvh; /* dynamic viewport height fixes mobile bar issues */
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
 }
 
 /* Scrollbar */
