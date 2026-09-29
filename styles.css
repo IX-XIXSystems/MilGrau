@@ -1051,6 +1051,7 @@ input:focus, .select-selected.select-arrow-active {
     
     .booking-container {
         padding: 1.5rem;
+        padding-bottom: 120px; /* Evita que la barra flotante de algunos navegadores/sistemas operativos tape el botón */
     }
     
     .features, .pricing-grid, .settings-grid {

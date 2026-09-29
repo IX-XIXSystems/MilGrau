@@ -183,13 +183,22 @@ window.navigateTo = function(targetId) {
     }
     
     // Update active nav link
-    document.querySelectorAll('.floating-nav .nav-link').forEach(link => {
-        if(link.getAttribute('data-target') === targetId) {
-            link.classList.add('active');
+    const floatingNav = document.querySelector('.floating-nav');
+    if (floatingNav) {
+        if (targetId === 'home') {
+            floatingNav.style.display = 'flex';
         } else {
-            link.classList.remove('active');
+            floatingNav.style.display = 'none';
         }
-    });
+        
+        floatingNav.querySelectorAll('.nav-link').forEach(link => {
+            if(link.getAttribute('data-target') === targetId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
 
     // Specific logic per view
     if (targetId === 'booking') {
